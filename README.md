@@ -61,6 +61,8 @@ Sur chaque fichier dans le dossier api vous avez la **base url** fournit.
 
 Les composants dans le dossier **private** ne sont pas à modifier.
 
+Le design à été fait via [Bulma](https://bulma.io), si besoin vous avez la doc pour compléter l'UI
+
 # Notes
 
 Le design n'a pas d'importance ,mais vous êtes libre de changer.
