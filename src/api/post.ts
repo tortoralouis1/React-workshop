@@ -18,6 +18,10 @@ async function getPost(postID: Post['id']): Promise<Post> {
 async function getPosts(): Promise<Array<Post>> {
     // get all posts
     // [TODO] remove this return to use a fetch API
+
+    //const response = await fetch(base_url)
+    //consta data = await response.json()
+
     return [
         {
             id: 1,
