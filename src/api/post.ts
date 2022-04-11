@@ -6,13 +6,9 @@ const base_url = 'http://localhost:3004/posts'
 async function getPost(postID: Post['id']): Promise<Post> {
     // get a unique post
     // [TODO] remove this return to use a fetch API
-    return {
-        id: 1,
-        title: 'title',
-        userId: 1,
-        body: 'body',
-        postImageUrl: 'https://picsum.photos/1280/960',
-    }
+
+    const response = await fetch('${base_ur}/${postID}');
+    return await response.json();
 }
 
 async function getPosts(): Promise<Array<Post>> {
