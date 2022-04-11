@@ -115,7 +115,7 @@ const EditPost = () => {
             <form className="post-form" onSubmit={handleAddOrCreatePost}>
                 <Field label="Title">
                     <input
-                        onBlur={handleChange}
+                        onChange={handleChange}
                         name="title"
                         className="input"
                         type="text"
@@ -125,7 +125,7 @@ const EditPost = () => {
                 </Field>
                 <Field label="Content">
                     <textarea
-                        onBlur={handleChange}
+                        onChange={handleChange}
                         name="body"
                         className="textarea"
                         placeholder="e.g. Hello world"
