@@ -18,26 +18,8 @@ async function getPost(postID: Post['id']): Promise<Post> {
 async function getPosts(): Promise<Array<Post>> {
     // get all posts
     // [TODO] remove this return to use a fetch API
-
-    //const response = await fetch(base_url)
-    //consta data = await response.json()
-
-    return [
-        {
-            id: 1,
-            title: 'title',
-            userId: 1,
-            body: 'body',
-            postImageUrl: 'https://picsum.photos/1280/960',
-        },
-        {
-            id: 2,
-            title: 'title 2',
-            userId: 2,
-            body: 'body 2',
-            postImageUrl: 'https://picsum.photos/1280/960',
-        },
-    ]
+    const response = await fetch(base_url);
+    return await response.json();
 }
 
 async function createPost(post: PostContent): Promise<Post> {

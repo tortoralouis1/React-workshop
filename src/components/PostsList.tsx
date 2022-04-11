@@ -13,11 +13,9 @@ const PostsList = () => {
        setPosts(data);
    }
 
-
     useEffect(() => {
         _getPosts()
     }, []);
-
 
     function renderItem(values: Post) {
         return (
