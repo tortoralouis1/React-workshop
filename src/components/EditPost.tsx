@@ -4,6 +4,7 @@ import { Picker_Picture, Post, PostContent, User } from '../api/types'
 import Field from '../private/Field'
 import ImageGalleryPicker from './ImageGalleryPicker'
 import { getPost } from '../api/post'
+import { getAllUser } from '../api/user'
 
 type FormEvent =
     | React.ChangeEvent<HTMLTextAreaElement>
@@ -38,6 +39,19 @@ const EditPost = () => {
         // chaque fois que l'id change
         _getPost(Number(id));
     }, [id]);
+
+    async function _getUsers() {
+        
+        const data = await getAllUser();
+        setUsers(data);
+     }
+     useEffect(() => {
+         _getPost(Number(id));
+     }, [id]);
+ 
+     useEffect(() => {
+         _getUsers();
+     }, []);
 
     function handleModalPictureSubmit(picture: Picker_Picture) {
         setFormData({
